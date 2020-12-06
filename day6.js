@@ -42,12 +42,8 @@ function calculateAnswers(input) {
         orderedAnswers = orderedAnswers.replace(",","");
         rawAnswers = rawAnswers.replace(",","");
       }
-      console.log("Group size", groupSize);
-      console.log("Raw answers", rawAnswers);
-
 
       for (var j = 0; j < rawAnswers.length; j++) {
-        console.log(groupSize);
         if (rawAnswers[j] === rawAnswers[j + groupSize - 1]) {
           sum2++;
         }
