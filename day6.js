@@ -23,14 +23,12 @@ function calculateAnswers(input) {
   let groupSize = 0;
 
   data.forEach((row, i) => {
-    //console.log(row);
     if (row === "") {
       groupNo++;
       let orderedAnswers = groupData.split("").sort();
       let rawAnswers = orderedAnswers.join();
 
       for (var j = 0; j < orderedAnswers.length - 1; j++) {
-        //console.log(orderedAnswers[j]);
         if (orderedAnswers[j] === orderedAnswers[j+1]) {
           orderedAnswers.splice(j, 1);
           j--;
