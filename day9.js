@@ -10,8 +10,15 @@ fs.readFile('./input_day9.txt', 'utf8' , (err, data) => {
   // calculateSeatIDs("FFFBBBFRRR");
   // calculateSeatIDs("BBFFBBFRLL");
 
-  //decryptData(data);
+  let start1 = new Date().getTime();
+  decryptData(data);
+  let end1 = new Date().getTime();
+  let start2 = new Date().getTime();
   decryptAgain(data);
+  let end2 = new Date().getTime();
+
+  console.log("Part 1:", end1 - start1);
+  console.log("Part 2:", end2 - start2);
 })
 
 function decryptAgain(input) {
